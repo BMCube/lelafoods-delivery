@@ -1,13 +1,15 @@
-package edu.miu.lelafoods.delivery.domain.dao.impl;
+package edu.miu.lelafoods.delivery.dao.impl;
 
+import edu.miu.lelafoods.delivery.dao.CartDao;
+import edu.miu.lelafoods.delivery.dao.impl.GenericDeliveryDaoImpl;
 import edu.miu.lelafoods.delivery.domain.Cart;
-import edu.miu.lelafoods.delivery.domain.Delivery;
-import edu.miu.lelafoods.delivery.domain.dao.CartDao;
-import edu.miu.lelafoods.delivery.domain.dao.DeliveryDao;
+import org.springframework.stereotype.Repository;
 
+@SuppressWarnings("unchecked")
+@Repository
 public class CartDaoImpl extends GenericDeliveryDaoImpl<Cart> implements CartDao {
 
-        public CartDaoImpl(){
-            super.setDaoType(Cart.class);
-        }
+    public CartDaoImpl(){
+        super.setDaoType(Cart.class);
+    }
 }

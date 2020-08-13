@@ -1,6 +1,6 @@
-package edu.miu.lelafoods.delivery.domain.dao.impl;
+package edu.miu.lelafoods.delivery.dao.impl;
 
-import edu.miu.lelafoods.delivery.domain.dao.GenericDeliveryDao;
+import edu.miu.lelafoods.delivery.dao.GenericDeliveryDao;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -19,6 +19,7 @@ public abstract class GenericDeliveryDaoImpl<T> implements GenericDeliveryDao<T>
     @Override
     public void save(T entity) {
         entityManager.persist(entity);
+        System.out.println("entity" + entity);
     }
 
     public void delete(T entity) {
