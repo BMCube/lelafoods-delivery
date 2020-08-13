@@ -1,8 +1,4 @@
-package edu.miu.lelafoods.order.config;
-
-import java.util.Properties;
-
-import javax.sql.DataSource;
+package edu.miu.lelafoods.delivery.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -18,9 +14,12 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
+import javax.sql.DataSource;
+import java.util.Properties;
+
 @Configuration
 @EnableTransactionManagement
-@ComponentScan("edu.miu.lelafoods.order")
+@ComponentScan("edu.miu.lelafoods.delivery")
 @PropertySource(value = "classpath:application.properties")
 public class PersistenceConfig {
 
@@ -43,7 +42,7 @@ public class PersistenceConfig {
 
         LocalContainerEntityManagerFactoryBean entityManagerFactoryBean = new LocalContainerEntityManagerFactoryBean();
         entityManagerFactoryBean.setDataSource(dataSource());
-        entityManagerFactoryBean.setPackagesToScan(new String[]{"edu.miu.lelafoods.order.domain"});
+        entityManagerFactoryBean.setPackagesToScan(new String[]{"edu.miu.lelafoods.delivery.domain"});
         HibernateJpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
         vendorAdapter.setShowSql(true);
         entityManagerFactoryBean.setJpaVendorAdapter(vendorAdapter);

@@ -1,4 +1,4 @@
-package edu.miu.lelafoods.eai.utils;
+package edu.miu.lelafoods.delivery.utils;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
@@ -24,6 +24,9 @@ public class ApplicationProperties {
     @Value("${lelafoods-eai.rabbitmq.routingkey}")
     private String eaiRoutingkey;
 
+    @Value("${notification.url}")
+    private String emailUrl;
+
     public String getRoutingkey() {
         return routingkey;
     }
@@ -46,5 +49,9 @@ public class ApplicationProperties {
 
     public String getEaiRoutingkey() {
         return eaiRoutingkey;
+    }
+
+    public String getEmailUrl() {
+        return emailUrl;
     }
 }
