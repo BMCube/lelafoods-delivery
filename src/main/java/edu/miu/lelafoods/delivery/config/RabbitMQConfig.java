@@ -1,6 +1,7 @@
-package edu.miu.lelafoods.eai.config;
+package edu.miu.lelafoods.delivery.config;
 
-import edu.miu.lelafoods.eai.utils.ApplicationProperties;
+
+import edu.miu.lelafoods.delivery.utils.ApplicationProperties;
 import org.springframework.amqp.core.*;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitAdmin;

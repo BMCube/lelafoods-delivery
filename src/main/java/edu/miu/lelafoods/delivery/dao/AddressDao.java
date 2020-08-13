@@ -1,4 +1,4 @@
-package edu.miu.lelafoods.delivery.domain.dao;
+package edu.miu.lelafoods.delivery.dao;
 
 import edu.miu.lelafoods.delivery.domain.Address;
 
