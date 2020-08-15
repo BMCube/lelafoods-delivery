@@ -1,0 +1,2 @@
+INSERT INTO `delivery` VALUES (1,10,'Calu','2020-08-14','New Delivery',3),(2,NULL,'Carrierb','2020-08-12','Delivered',NULL),(3,NULL,'Carrierb','2020-08-12','Delivered',NULL);
+INSERT INTO `hibernate_sequence` VALUES (4),(4),(4);
