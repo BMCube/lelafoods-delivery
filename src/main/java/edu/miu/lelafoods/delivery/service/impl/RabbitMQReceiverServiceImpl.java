@@ -33,7 +33,7 @@ public class RabbitMQReceiverServiceImpl implements RabbitMQReceiverService {
     RestTemplate restTemplate = new RestTemplate();
 
     @Override
-    @RabbitListener(queues = "lelafoods-order.queue")
+    @RabbitListener(queues = "lelafoods-delivery.queue")
     public void receiverCart(CartDto cart) {
         try {
             List<Order> orderList = cart.getOrder();
